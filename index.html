@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Kolevia</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #F6F7FB; color: #1B1D29; }
+  main { max-width: 420px; margin: 0 auto; padding: 48px 20px; }
+  h1 { font-size: 24px; margin: 0 0 12px; }
+  p { font-size: 16px; line-height: 1.5; color: #4A4E63; }
+  a.btn { display: block; text-align: center; padding: 16px; border-radius: 16px; background: #3B5BDB; color: #fff; font-weight: 700; text-decoration: none; margin-top: 24px; }
+  @media (prefers-color-scheme: dark) { body { background: #12131A; color: #F2F3F8; } p { color: #B4B7C9; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Kolevia</h1>
+  <p>Bu bağlantı Kolevia uygulamasını açar. Uygulama açılmadıysa, e-postadaki kodu Kolevia uygulamasındaki kod alanına yazarak girebilirsin.</p>
+  <a class="btn" id="open" href="#">Kolevia&#39;yı aç</a>
+</main>
+<script>
+  // Same query as the app route; the button is a real user tap, so the browser opens the app.
+  document.getElementById("open").href = "kolevia://auth/code" + location.search;
+</script>
+</body>
+</html>
